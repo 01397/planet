@@ -1,0 +1,212 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>天王星</title>
+	<style media="screen">
+		html,body{
+			margin: 0;
+			font-family: serif;
+		}
+		#sec-cover{
+			height: calc(100vh + 292px);
+			min-height: 600px;
+		}
+		#sec-cover, .header, footer{
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+		}
+		#sec-cover1{
+			height: 60vh;
+			position: relative;
+		}
+		#sec-cover1>h1{
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			text-align: center;
+			font-size: 128px;
+			color: white;
+		}
+		#sec-cover2{
+			height: 40vh;
+			width: 90%;
+			margin: auto;
+			display: flex;
+		}
+		#sec-cover2>a{
+			flex: 1;
+			padding: 1em;
+			text-align: center;
+			color: white;
+			text-decoration: none;
+			font-size: 1.4em;
+			position: relative;
+			height: 1.5em;
+			transition: background-color 0.2s linear;
+		}
+		#sec-cover2>a:hover{
+			background-color: rgba(255,255,255,0.2);
+		}
+		/*#sec-cover2>a::before{
+			width: 10px;
+			height: 10px;
+			border-left: thin solid #fff;
+			border-top: thin solid #fff;
+			position: absolute;
+			content: '';
+			display: block;
+			top: 1em;
+			left: 1em;
+		}
+		#sec-cover2>a::after{
+			width: 10px;
+			height: 10px;
+			border-bottom: thin solid #fff;
+			border-right: thin solid #fff;
+			position: absolute;
+			content: '';
+			display: block;
+			bottom: 1em;
+			right: 1em;
+		}*/
+		#sec-cover::after, #sec-cover::before{
+			content: '';
+			width: 50px;
+			height: 50px;
+			border-right: 1px solid #fff;
+			border-bottom: 1px solid #fff;
+			position: absolute;
+			bottom: 30px;
+			left: 0;
+			right: 0;
+			margin: auto;
+			transform: rotateZ(45deg);
+			animation: 1.5s ease 0s infinite normal both running navAnim
+		}
+		#sec-cover::before{
+			bottom: 50px;
+		}
+		@keyframes navAnim {
+			0%{
+				opacity: 0;
+				transform: translateY(-40px) rotateZ(45deg);
+			}
+			95%{
+				opacity: 1;
+				transform: translateY(0px) rotateZ(45deg);
+			}
+			100%{
+				opacity: 0;
+				transform: translateY(0px) rotateZ(45deg);
+			}
+		}
+		#gotoTop{
+			display: block;
+			position: fixed;
+			right: 10px;
+			bottom: 10px;
+			border-radius: 100%;
+			background-color: rgba(127,127,127,0.8);
+			width: 50px;
+			height: 50px;
+		}
+		#gotoTop::after{
+			position: absolute;
+			content: '';
+			display: block;
+			width: 20px;
+			height: 20px;
+			border-right: 2px solid #fff;
+			border-top: 2px solid #fff;
+			left: 15px;
+			top: 20px;
+			transform: rotateZ(-45deg);
+		}
+		.header{
+			padding: 128px 0;
+		}
+		h2{
+			margin: auto;
+			padding: 8px 0;
+			text-align: center;
+			background-color: rgba(255,255,255,0.5);
+			color: black;
+			width: 300px;
+			font-size: 24px;
+		}
+		.contents{
+			color: #fff;
+			background-color: #444;
+			padding: 64px 16px;
+		}
+		footer{
+			padding: 20vh 0;
+		}
+		footer>a{
+			display: block;
+			width: 10em;
+			background-color: rgba(0,0,0,0.5);
+			text-align: center;
+			margin: auto;
+			color: white;
+			font-size: 1em;
+			text-decoration: none;
+			transition: background-color 0.2s linear;
+		}
+		footer>a:hover{
+			background-color: rgba(127,127,127,0.5);
+		}
+	</style>
+</head>
+<body>
+	<section id="sec-cover" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Uranus_rings_and_moons.jpg/1024px-Uranus_rings_and_moons.jpg);">
+		<div id="sec-cover1">
+			<h1>Uranus</h1>
+		</div>
+		<div id="sec-cover2">
+			<a href="#intro">簡単な紹介</a>
+			<a href="#seisitu">物理的性質</a>
+			<a href="#myth">惑星の神話</a>
+		</div>
+		<section class="header" id="intro">
+			<h2>簡単な紹介</h2>
+		</section>
+	</section>
+	<section class="contents">
+		<p>
+			天王星は，太陽系の内側から数えて7番目の惑星である．太陽系の惑星の中では木星・土星についで3番目に大きい惑星であり，1781年，イギリスの天文学者ウィリアム・ハーシェルによって発見された．それ以前にも観測されているが，恒星とされていた．
+		</p>
+	</section>
+	<section class="header"  id="seisitu" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/3/3d/Uranus2.jpg);">
+		<h2>物理的性質</h2>
+	</section>
+	<section class="contents">
+		<h3>概要</h3>
+		<table style="color:#ffffff">
+			<tr><th>直径</th><td>51118 km</td></tr>
+			<tr><th>質量</th><td>8.686×10<sup>26</sup>kg</td></tr>
+			<tr><th>密度</th><td>1.32 g/cm<sup>3</sup>km</td></tr>
+			<tr><th>公転周期</th><td>84.25301 年</td></tr>
+			<tr><th>自転周期</th><td>17時間14分</td></tr>
+		</table>
+		<h3>構造</h3>
+		<p>
+			天王星は主にガスと多様な氷から成っている。大気は主に水素からなり，ヘリウム、メタンも含まれている．内部は重い元素が中心で，岩石と氷からなる核や，水，メタン，アンモニアが含まれる氷からなるマントルで構成される。木星や土星とは異なり，酸素，炭素，窒素が多く含まれる．天王星と海王星は従来木星型惑星に分類されていたが，液体の金属水素の有無などの違いから，天王星型惑星として分類されるようになった。
+		</p>
+	</section>
+	<section class="header" id="myth" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Uranus%2C_Earth_size_comparison_2.jpg/800px-Uranus%2C_Earth_size_comparison_2.jpg);">
+		<h2>惑星の神話</h2>
+	</section>
+	<section class="contents">
+		<p>天王星(Uranus)は，他の惑星で神話上の大物の名が付いている事に倣って近世以降に命名されたため，天体の特徴と神名にはあまり関係がない．ウラヌスはギリシャ神話に由来する名称であり，ギリシア神話の主神ゼウスの祖父にあたる．</p>
+	</section>
+	<footer style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Uranus_rings_and_moons.jpg/1024px-Uranus_rings_and_moons.jpg);">
+		<a href="index.html">Go Back Home</a>
+	</footer>
+	<a id="gotoTop" href="#sec-cover"></a>
+</body>
+</html>

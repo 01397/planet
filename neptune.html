@@ -1,0 +1,190 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>海王星</title>
+	<style media="screen">
+		html,body{
+			margin: 0;
+			font-family: serif;
+		}
+		#sec-cover{
+			height: calc(100vh + 292px);
+			min-height: 600px;
+		}
+		#sec-cover, .header, footer{
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+		}
+		#sec-cover1{
+			height: 60vh;
+			position: relative;
+		}
+		#sec-cover1>h1{
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			text-align: center;
+			font-size: 128px;
+			color: white;
+		}
+		#sec-cover2{
+			height: 40vh;
+			width: 90%;
+			margin: auto;
+			display: flex;
+		}
+		#sec-cover2>a{
+			flex: 1;
+			padding: 1em;
+			text-align: center;
+			color: white;
+			text-decoration: none;
+			font-size: 1.4em;
+			position: relative;
+			height: 1.5em;
+			transition: background-color 0.2s linear;
+		}
+		#sec-cover2>a:hover{
+			background-color: rgba(255,255,255,0.2);
+		}
+		#sec-cover::after, #sec-cover::before{
+			content: '';
+			width: 50px;
+			height: 50px;
+			border-right: 1px solid #fff;
+			border-bottom: 1px solid #fff;
+			position: absolute;
+			bottom: 30px;
+			left: 0;
+			right: 0;
+			margin: auto;
+			transform: rotateZ(45deg);
+			animation: 1.5s ease 0s infinite normal both running navAnim
+		}
+		#sec-cover::before{
+			bottom: 50px;
+		}
+		@keyframes navAnim {
+			0%{
+				opacity: 0;
+				transform: translateY(-40px) rotateZ(45deg);
+			}
+			95%{
+				opacity: 1;
+				transform: translateY(0px) rotateZ(45deg);
+			}
+			100%{
+				opacity: 0;
+				transform: translateY(0px) rotateZ(45deg);
+			}
+		}
+		#gotoTop{
+			display: block;
+			position: fixed;
+			right: 10px;
+			bottom: 10px;
+			border-radius: 100%;
+			background-color: rgba(127,127,127,0.8);
+			width: 50px;
+			height: 50px;
+		}
+		#gotoTop::after{
+			position: absolute;
+			content: '';
+			display: block;
+			width: 20px;
+			height: 20px;
+			border-right: 2px solid #fff;
+			border-top: 2px solid #fff;
+			left: 15px;
+			top: 20px;
+			transform: rotateZ(-45deg);
+		}
+		.header{
+			padding: 128px 0;
+		}
+		h2{
+			margin: auto;
+			padding: 8px 0;
+			text-align: center;
+			background-color: rgba(255,255,255,0.5);
+			color: black;
+			width: 300px;
+			font-size: 24px;
+		}
+		.contents{
+			color: #fff;
+			background-color: #444;
+			padding: 64px 16px;
+		}
+		footer{
+			padding: 20vh 0;
+		}
+		footer>a{
+			display: block;
+			width: 10em;
+			background-color: rgba(0,0,0,0.5);
+			text-align: center;
+			margin: auto;
+			color: white;
+			font-size: 1em;
+			text-decoration: none;
+			transition: background-color 0.2s linear;
+		}
+		footer>a:hover{
+			background-color: rgba(127,127,127,0.5);
+		}
+	</style>
+</head>
+<body>
+	<section id="sec-cover" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Neptune_Full.jpg/600px-Neptune_Full.jpg);">
+		<div id="sec-cover1">
+			<h1>Neptune</h1>
+		</div>
+		<div id="sec-cover2">
+			<a href="#intro">簡単な紹介</a>
+			<a href="#seisitu">物理的性質</a>
+			<a href="#myth">惑星の神話</a>
+		</div>
+		<section class="header" id="intro">
+			<h2>簡単な紹介</h2>
+		</section>
+	</section>
+	<section class="contents">
+		<p>海王星は，太陽系の内側から数えて8番目の惑星であり，2006年に冥王星が準惑星に分類されて以降は太陽から最も遠い位置を公転する惑星である．天王星の発見以後，未知の惑星があることが考えられたため計算によって惑星の存在が予想されたのち，1846年に望遠鏡によって発見された．また，それ以前にも観測されていたが恒星と思われていた。</p>
+	</section>
+	<section class="header"  id="seisitu" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Neptune_storms.jpg/800px-Neptune_storms.jpg);">
+		<h2>物理的性質</h2>
+	</section>
+	<section class="contents">
+		<h3>概要</h3>
+		<table style="color:#ffffff">
+			<tr><th>直径</th><td>49528 km</td></tr>
+			<tr><th>質量</th><td>1.02×10<sup>26</sup> kg</td></tr>
+			<tr><th>密度</th><td>1.638 g/cm<sup>3</sup>km</td></tr>
+			<tr><th>公転周期</th><td>164.79 年</td></tr>
+			<tr><th>自転周期</th><td>16時間 6.5分</td></tr>
+		</table>
+		<h3>構造</h3>
+		<p>
+			海王星の構造は天王星とよく似ている．水素やヘリウムなどからなる大気層があり，その内側には水やアンモニアの氷の層がある．この層は「氷」と呼ばれるが，実際には高温で高密度な液体である．最後に中心には岩石からなる核があり，ニッケル，鉄などで構成され，核だけで地球の質量を上回るとされている．海王星は巨大な氷惑星で，太陽からの熱もあまり受けないため，表面温度は50Kほどである．しかし内部には放射線源の崩壊と考えられる熱源があるため，核の温度はは5400Kほどにもなる．
+		</p>
+		<h3>大気</h3>
+		大気は大部分が水素であるがメタンが1.5%含まれている．このため惑星は美しい青色をしているが，天王星よりも青みが深い理由は未知の化合物があるためだと考えられている．1980年代には表面に大きな渦巻き模様が現れたがその後の観測では消滅し，この模様は謎のままである．海王星では時速2000kmにもなるとされる．また海王星には磁場があるが，磁場の中心は自転軸から46.8度傾いている．この自転軸から大きくずれているという点でも天王星と類似している．さらに地球同様季節があるとされている．
+	</section>
+	<section class="header" id="myth" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Neptune%2C_Earth_size_comparison_2.jpg/800px-Neptune%2C_Earth_size_comparison_2.jpg);">
+		<h2>惑星の神話</h2>
+	</section>
+	<section class="contents">
+		<p>海王星(Neptune)は，他の惑星で神話上の大物の名が付いている事に倣って近世以降に命名されたため，天体の特徴と神名にはあまり関係がない．最も外にある惑星であることから深淵のイメージから，ローマ神話の海の神ネプチューンの名前が与えられた．ギリシャ神話でいう海の神ポセイドンに当たる．</p>
+	</section>
+	<footer style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Neptune_Full.jpg/600px-Neptune_Full.jpg);">
+		<a href="index.html">Go Back Home</a>
+	</footer>
+	<a id="gotoTop" href="#sec-cover"></a>
+</body>
+</html>

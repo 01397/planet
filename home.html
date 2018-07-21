@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>The planets in the Solar System</title>
+	<link rel="stylesheet" href="moji.css">
+	<link rel="stylesheet" href="picture.css">
+	<link rel="stylesheet" href="border.css">
+	<script type="text/javascript">
+		setTimeout(function() {
+			document.getElementById('line').style.animationPlayState = "paused";
+			document.getElementById('line').style.borderRight = "none";
+		}, 5400);
+	</script>
+	<style media="screen">
+		#about-wrapper {
+			position: fixed;
+			left: 0;
+			bottom: -100vh;
+			right: 0;
+			height: 100vh;
+			background-color: rgba(0, 0, 0, 0.8);
+			transition: background-color 0.2s linear;
+			padding-top: 60px;
+			transition: bottom 1s ease;
+			box-sizing: border-box;
+		}
+
+		#about {
+			width: 500px;
+			height: 400px;
+			background-color: #060622;
+			margin: auto;
+			border-radius: 8px;
+			color: #fcfcfc;
+			font-family: sans-serif;
+		}
+
+		.member {
+			height: 100px;
+			display: flex;
+		}
+
+		.memberImageWrapper {
+			width: 100px;
+			padding: 10px;
+		}
+
+		.memberImage {
+			width: 80px;
+			height: 80px;
+			border-radius: 50%;
+		}
+
+		.memberBody {
+			flex: 1;
+			padding: 10px;
+			line-height: 15px;
+			font-size: 15px;
+		}
+
+		.memberBody h1 {
+			margin: 0;
+			font-size: 30px;
+			line-height: 35px;
+		}
+
+		.showingMembers #about-wrapper {
+			display: block;
+		}
+
+		#close_btn {
+			font-family: sans-serif;
+			width: 5em;
+			margin: 20px auto;
+			text-align: center;
+			font-size: 16px;
+			padding: 8px;
+			cursor: pointer;
+		}
+
+		#planet-name {
+			text-align: center;
+			color: rgba(255, 255, 255, 0.75);
+			font-size: 20px;
+		}
+	</style>
+	<script type="text/javascript">
+		function showMembers() {
+			document.getElementById('about-wrapper').style.bottom = "0";
+		}
+
+		function closeMembers() {
+			document.getElementById('about-wrapper').style.bottom = "-100vh";
+		}
+      function showName(name){
+         document.getElementById('planet-name').textContent = name;
+      }
+      function hideName(){
+         document.getElementById('planet-name').textContent = '';
+      }
+	</script>
+</head>
+
+<body>
+	<p id="line" class="anim-typewriter">The planets in the Solar System</p>
+
+	<section class="slideshow">
+		<div class="content">
+			<div class="content-carrousel">
+				<figure class="shadow" onmouseover="showName('Mercury')" onmouseout="hideName()"><a href="mercury.html"><img src="img/Mercury.jpg"></a></figure>
+				<figure class="shadow" onmouseover="showName('Venus')" onmouseout="hideName()"><a href="venus.html"><img src="img/Venus.jpg"></a></figure>
+				<figure class="shadow" onmouseover="showName('Earth')" onmouseout="hideName()"><a href="earth.html"><img src="img/Earth.jpg"></a></figure>
+				<figure class="shadow" onmouseover="showName('Mars')" onmouseout="hideName()"><a href="mars.html"><img src="img/Mars.jpg"></a></figure>
+				<figure class="shadow" onmouseover="showName('Jupiter')" onmouseout="hideName()"><a href="jupiter.html"><img src="img/Jupiter.jpg"></a></figure>
+				<figure class="shadow" onmouseover="showName('Saturn')" onmouseout="hideName()"><a href="saturn.html"><img src="img/Saturn.jpg"></a></figure>
+				<figure class="shadow" onmouseover="showName('Uranus')" onmouseout="hideName()"><a href="uranus.html"><img src="img/Uranus.jpg"></a></figure>
+				<figure class="shadow" onmouseover="showName('Neptune')" onmouseout="hideName()"><a href="neptune.html"><img src="img/Neptune.jpg"></a></figure>
+			</div>
+		</div>
+	</section>
+	<div id="planet-name"></div>
+	<ul class="nav">
+		<li>
+			<a onclick="showMembers()">About us</a></li>
+	</ul>
+	<div id="about-wrapper">
+		<div id="about">
+			<div class="member">
+				<div class="memberImageWrapper">
+					<img class="memberImage" src="img/member_genji.jpg" alt="">
+				</div>
+				<div class="memberBody">
+					<h1>Genji Shiraishi</h1> 1810336
+					<br/> Jupiter & Saturn pages' creator
+				</div>
+			</div>
+			<div class="member">
+				<div class="memberImageWrapper">
+					<img class="memberImage" src="img/member_naoki.jpg" alt="">
+				</div>
+				<div class="memberBody">
+					<h1>Naoki Asao</h1> 1810012
+					<br/> Uranus & Neptune pages' creator<br/> Responsive Designer
+				</div>
+			</div>
+			<div class="member">
+				<div class="memberImageWrapper">
+					<img class="memberImage" src="img/member_chengzhong.jpg" alt="">
+				</div>
+				<div class="memberBody">
+					<h1>WuChengZhong</h1> 1810096
+					<br/> Earth & Mars pages' creater<br/> Animation Designer
+				</div>
+			</div>
+			<div class="member">
+				<div class="memberImageWrapper">
+					<img class="memberImage" src="img/member_taisei.jpg" alt="">
+				</div>
+				<div class="memberBody">
+					<h1>Taisei Minohara</h1> 1810612
+					<br/> Mercury & Venus pages' creator
+				</div>
+			</div>
+		</div>
+		<div id="close_btn" onclick="closeMembers()">CLOSE</div>
+	</div>
+</body>
+
+</html>

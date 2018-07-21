@@ -1,0 +1,199 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style media="screen">
+		html,body{
+			margin: 0;
+			font-family: serif;
+		}
+		#sec-cover{
+			height: calc(100vh + 292px);
+			min-height: 600px;
+		}
+		#sec-cover, .header, footer{
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+		}
+		#sec-cover1{
+			height: 60vh;
+			position: relative;
+		}
+		#sec-cover1>h1{
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			text-align: center;
+			font-size: 128px;
+			color: white;
+		}
+		#sec-cover2{
+			height: 40vh;
+			width: 90%;
+			margin: auto;
+			display: flex;
+		}
+		#sec-cover2>a{
+			flex: 1;
+			padding: 1em;
+			text-align: center;
+			color: white;
+			text-decoration: none;
+			font-size: 1.4em;
+			position: relative;
+			height: 1.5em;
+			transition: background-color 0.2s linear;
+		}
+		#sec-cover2>a:hover{
+			background-color: rgba(255,255,255,0.2);
+		}
+		/*#sec-cover2>a::before{
+			width: 10px;
+			height: 10px;
+			border-left: thin solid #fff;
+			border-top: thin solid #fff;
+			position: absolute;
+			content: '';
+			display: block;
+			top: 1em;
+			left: 1em;
+		}
+		#sec-cover2>a::after{
+			width: 10px;
+			height: 10px;
+			border-bottom: thin solid #fff;
+			border-right: thin solid #fff;
+			position: absolute;
+			content: '';
+			display: block;
+			bottom: 1em;
+			right: 1em;
+		}*/
+		#sec-cover::after, #sec-cover::before{
+			content: '';
+			width: 50px;
+			height: 50px;
+			border-right: 1px solid #fff;
+			border-bottom: 1px solid #fff;
+			position: absolute;
+			bottom: 30px;
+			left: 0;
+			right: 0;
+			margin: auto;
+			transform: rotateZ(45deg);
+			animation: 1.5s ease 0s infinite normal both running navAnim
+		}
+		#sec-cover::before{
+			bottom: 50px;
+		}
+		@keyframes navAnim {
+			0%{
+				opacity: 0;
+				transform: translateY(-40px) rotateZ(45deg);
+			}
+			95%{
+				opacity: 1;
+				transform: translateY(0px) rotateZ(45deg);
+			}
+			100%{
+				opacity: 0;
+				transform: translateY(0px) rotateZ(45deg);
+			}
+		}
+		#gotoTop{
+			display: block;
+			position: fixed;
+			right: 10px;
+			bottom: 10px;
+			border-radius: 100%;
+			background-color: rgba(127,127,127,0.8);
+			width: 50px;
+			height: 50px;
+		}
+		#gotoTop::after{
+			position: absolute;
+			content: '';
+			display: block;
+			width: 20px;
+			height: 20px;
+			border-right: 2px solid #fff;
+			border-top: 2px solid #fff;
+			left: 15px;
+			top: 20px;
+			transform: rotateZ(-45deg);
+		}
+		.header{
+			padding: 128px 0;
+		}
+		h2{
+			margin: auto;
+			padding: 8px 0;
+			text-align: center;
+			background-color: rgba(255,255,255,0.5);
+			color: black;
+			width: 300px;
+			font-size: 24px;
+		}
+		.contents{
+			color: #fff;
+			background-color: #444;
+			padding: 64px 16px;
+		}
+		footer{
+			padding: 20vh 0;
+		}
+		footer>a{
+			display: block;
+			width: 10em;
+			background-color: rgba(0,0,0,0.5);
+			text-align: center;
+			margin: auto;
+			color: white;
+			font-size: 1em;
+			text-decoration: none;
+			transition: background-color 0.2s linear;
+		}
+		footer>a:hover{
+			background-color: rgba(127,127,127,0.5);
+		}
+	</style>
+</head>
+<body>
+	<section id="sec-cover" style="background-image: url(http://spaceinfo.jaxa.jp/files/15509.jpg);">
+		<div id="sec-cover1">
+			<h1>Mercury</h1>
+		</div>
+		<div id="sec-cover2">
+			<a href="#intro">簡単な紹介</a>
+			<a href="#seisitu">物理的性質</a>
+			<a href="#myth">惑星の神話</a>
+		</div>
+		<section class="header" id="intro">
+			<h2>簡単な紹介</h2>
+		</section>
+	</section>
+	<section class="contents">
+		<p>ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ</p>
+	</section>
+	<section class="header"  id="seisitu" style="background-image: url(https://blogimg.goo.ne.jp/user_image/55/4e/a1a843445644c198120b4409a4ecff47.jpg);">
+		<h2>物理的性質</h2>
+	</section>
+	<section class="contents">
+		<p>ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ</p>
+	</section>
+	<section class="header" id="myth" style="background-image: url(https://blogimg.goo.ne.jp/user_image/55/4e/a1a843445644c198120b4409a4ecff47.jpg);">
+		<h2>惑星の神話</h2>
+	</section>
+	<section class="contents">
+		<p>ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ</p>
+	</section>
+	<footer style="background-image: url(http://spaceinfo.jaxa.jp/files/15509.jpg);">
+		<a href="index.html">Go Back Home</a>
+	</footer>
+	<a id="gotoTop" href="#sec-cover"></a>
+</body>
+</html>
